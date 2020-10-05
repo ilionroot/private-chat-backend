@@ -16,7 +16,7 @@ let msgs = [
 
 app.use(cors());
 
-http.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("On-line");
 });
 
