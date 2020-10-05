@@ -1,5 +1,5 @@
 const app = require("express")();
-const http = require("http").Server(app);
+const http = require("http").createServer(app);
 const cors = require("cors");
 const io = require("socket.io")(http);
 
@@ -14,7 +14,7 @@ let msgs = [
   },
 ];
 
-http.use(cors());
+app.use(cors());
 
 io.on("connection", (socket) => {
   console.log(`${socket.id} conectou!`);
