@@ -4,8 +4,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon app",
-    "build":
+    "dev": "nodemon app"
   },
   "license": "MIT",
   "dependencies": {
