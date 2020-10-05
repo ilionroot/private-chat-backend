@@ -14,7 +14,7 @@ let msgs = [
   },
 ];
 
-app.use(cors());
+http.use(cors());
 
 io.on("connection", (socket) => {
   console.log(`${socket.id} conectou!`);
