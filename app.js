@@ -16,6 +16,10 @@ let msgs = [
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("On-line");
+});
+
 io.on("connection", (socket) => {
   console.log(`${socket.id} conectou!`);
   socket.emit("allMessages", msgs);
